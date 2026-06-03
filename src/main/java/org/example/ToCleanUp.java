@@ -1,5 +1,7 @@
 package org.example;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Scanner;
 
 public class ToCleanUp {
@@ -91,7 +93,7 @@ public class ToCleanUp {
     }
 
     // Should these methods live in separate classes? Ehhhh but I'm in too deep now
-    void showAccounts(String householdName) {
+    void showAccounts(@NotNull String householdName) {
         allAccounts showAccount = new allAccounts();
         switch (householdName) {
             // Does not really follow DRY - easy to refactor if running a search to a database
@@ -118,7 +120,7 @@ public class ToCleanUp {
         }
     }
 
-    long depositToAccount(String householdName, long deposit) {
+    long depositToAccount(@NotNull String householdName, long deposit) {
         // TO DO: Refactor code to avoid overflow issues
         // Show message to user when total would be greater than max long
         // Restart transaction
@@ -145,7 +147,7 @@ public class ToCleanUp {
         return newTotal;
     }
 
-    long withdrawFromAccount(String householdName, long withdrawal) {
+    long withdrawFromAccount(@NotNull String householdName, long withdrawal) {
         // TO DO: Refactor code to avoid going below MIN long value
         // Show message to user telling them to pick a smaller withdrawal
         // Restart the loop
