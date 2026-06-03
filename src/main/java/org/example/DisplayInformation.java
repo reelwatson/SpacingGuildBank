@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.Scanner;
+// TO DO: Ultimately create UI interface and remove Scanner requirements
 
 public class DisplayInformation {
     public static void main (String[] args) {
