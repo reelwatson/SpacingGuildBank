@@ -20,7 +20,24 @@ public class Withdrawals {
 
     public boolean withdrawalValidation(double withdrawalAmount, double initialAccountAmount) {
         boolean isValidWithdrawal = false;
+        double maxDouble = Double.MAX_VALUE;
+        do {
+            if (withdrawalAmount <= 0) {
+                System.out.println("You must withdraw at least one solari.");
+            }
+            else if (withdrawalAmount > initialAccountAmount) {
+                System.out.println("You cannot withdraw more than is in your account.");
+                // In real life ATMs let you overdraft, but I find it scummy, so we're going to prevent it in this program
+            }
+            else if (withdrawalAmount >= maxDouble) {
+                System.out.println("The amount you are trying to withdraw is too high. Please select a smaller amount.");
+            }
+            else {
+                isValidWithdrawal = true;
 
+            }
+        }
+        while (!isValidWithdrawal);
         return isValidWithdrawal;
     }
 }
