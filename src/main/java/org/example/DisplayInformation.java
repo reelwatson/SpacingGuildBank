@@ -29,7 +29,9 @@ public class DisplayInformation {
         // Won't handle null because ALL valid accountHolderIds should have at least one linked account
         Scanner scanner = new Scanner(System.in);
         System.out.println("Select which account you would like to review: ");
-        String selection = scanner.nextLine();
+        String placeholderSelection = scanner.nextLine();
+
+        // I need to learn how to query records...
 
         // Then populate display with last 10 transactions
 
