@@ -28,7 +28,9 @@
 #### Tables
 
 ### Example API Requests and Responses
-Example Request
-Example Response
+
+#### Example Request
+
+#### Example Response
 
 ### Testing
